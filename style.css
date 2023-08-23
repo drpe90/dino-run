@@ -1,0 +1,71 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1541256123332-c1c9d0a59dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80");
+  object-fit: cover;
+  font-family: "VT323", monospace;
+  font-size: 60px;
+}
+
+.title {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  width: 600px;
+  height: 300px;
+  border-bottom: 2px solid black;
+  margin: auto;
+}
+
+#dino {
+  width: 60px;
+  height: 60px;
+  background-image: url("./images/trex.png");
+  background-size: 60px 60px;
+  position: relative;
+  top: 240px;
+}
+
+#cactus {
+  width: 120px;
+  height: 70px;
+  background-image: url("./images/cactus.png");
+  background-size: 120px 70px;
+  position: relative;
+  top: 170px;
+  left: 500px;
+  animation: cactusMove 2s infinite linear;
+}
+
+@keyframes cactusMove {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: -30px;
+  }
+}
+
+.jump {
+  animation: dinoJump 0.6s linear;
+}
+
+@keyframes dinoJump {
+  0% {
+    top: 240px;
+  }
+  25% {
+    top: 190px;
+  }
+  50% {
+    top: 140px;
+  }
+  75% {
+    top: 190px;
+  }
+  100% {
+    top: 240px;
+  }
+}
